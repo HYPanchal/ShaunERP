@@ -1,0 +1,12 @@
+/* CSS Styling */
+.logo .bold {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700; /* Bold */
+}
+
+.logo .thin {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300; /* Thin */
+}

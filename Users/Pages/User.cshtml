@@ -1,0 +1,68 @@
+﻿@page
+@model Users.Pages.UserModel
+@{
+}
+
+
+<!-- User Form -->
+<div class="card mt-5">
+    <div class="card-header">
+        <h4 class="heading mb-0">Add New User</h4>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <h5>User Details</h5>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label for="FirstName" class="text-secondary font-w500">First Name</label>
+                        <input type="text" name="FirstName" id="FirstName" class="form-control" placeholder="Enter First Name">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label for="LastName" class="text-secondary font-w500">Last Name</label>
+                        <input type="text" name="LastName" id="LastName" class="form-control" placeholder="Enter Last Name">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label for="Email" class="text-secondary font-w500">Email</label>
+                        <input type="email" name="Email" id="Email" class="form-control" placeholder="Enter Email">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label for="PhoneNumber" class="text-secondary font-w500">Phone Number</label>
+                        <input type="text" name="PhoneNumber" id="PhoneNumber" class="form-control" placeholder="Enter Phone Number">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label for="Username" class="text-secondary font-w500">Username</label>
+                        <input type="text" name="Username" id="Username" class="form-control" placeholder="Enter Username">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label for="Password" class="text-secondary font-w500">Password</label>
+                        <input type="password" name="Password" id="Password" class="form-control" placeholder="Enter Password">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-check mb-3">
+                        <input type="checkbox" name="IsActive" id="IsActive" class="form-check-input">
+                        <label for="IsActive" class="form-check-label">Active</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-check mb-3">
+                        <input type="checkbox" name="IsSystemAdmin" id="IsSystemAdmin" class="form-check-input">
+                        <label for="IsSystemAdmin" class="form-check-label">System Admin</label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit User</button>
+        </form>
+    </div>
+</div>

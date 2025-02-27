@@ -1,0 +1,58 @@
+﻿@page
+@model Projects.Pages.WorkLogModel
+@{
+}
+
+<div class="content-body">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li><h5 class="bc-title">Work Log Management</h5></li>
+        </ol>
+    </div>
+
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="heading mb-0">Add Work Log Entry</h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <h5>Work Log Details</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="IssueId" class="text-secondary font-w500">Issue ID</label>
+                                <input type="number" name="IssueId" id="IssueId" class="form-control" placeholder="Enter Issue ID">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="HoursSpent" class="text-secondary font-w500">Hours Spent</label>
+                                <input type="number" step="0.1" name="HoursSpent" id="HoursSpent" class="form-control" placeholder="Enter Hours Spent">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="LogDate" class="text-secondary font-w500">Log Date</label>
+                                <input type="date" name="LogDate" id="LogDate" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="LoggedBy" class="text-secondary font-w500">Logged By</label>
+                                <input type="text" name="LoggedBy" id="LoggedBy" class="form-control" placeholder="Enter Logger Name">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group mb-3">
+                                <label for="Description" class="text-secondary font-w500">Description</label>
+                                <textarea name="Description" id="Description" class="form-control" rows="4" placeholder="Enter Description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Work Log</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

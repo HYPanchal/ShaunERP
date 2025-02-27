@@ -1,0 +1,229 @@
+﻿@page
+@model CRM.Pages.OpportunityModel
+@{
+}
+<!--**********************************
+    Content body start
+***********************************-->
+<div class="content-body">
+
+    <!-- row -->
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li><h5 class="bc-title">Opportunity</h5></li>
+            <li class="breadcrumb-item">
+                <a href="javascript:void(0)">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.125 6.375L8.5 1.41667L14.875 6.375V14.1667C14.875 14.5424 14.7257 14.9027 14.4601 15.1684C14.1944 15.4341 13.8341 15.5833 13.4583 15.5833H3.54167C3.16594 15.5833 2.80561 15.4341 2.53993 15.1684C2.27426 14.9027 2.125 14.5424 2.125 14.1667V6.375Z" stroke="#2C2C2C" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M6.375 15.5833V8.5H10.625V15.5833" stroke="#2C2C2C" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Home
+                </a>
+            </li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Opportunity</a></li>
+        </ol>
+        <a class="text-primary fs-13" data-bs-toggle="offcanvas" href="#offcanvasExample1" role="button" aria-controls="offcanvasExample1">+ List Opportunities</a>
+    </div>
+    <!-- row -->
+
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="heading mb-0">Add New Opportunity</h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+
+                    <!-- Deal Basic Details -->
+                    <h5 class="mb-3">Deal Basic Details</h5>
+                    <div class="row">
+                        <!-- Deal Owner -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="DealOwner" class="text-secondary font-w500">Deal Owner</label>
+                                <input type="text" name="DealOwner" id="DealOwner" class="form-control" placeholder="Enter Deal Owner">
+                            </div>
+                        </div>
+                        <!-- Deal Name -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="DealName" class="text-secondary font-w500">Deal Name</label>
+                                <input type="text" name="DealName" id="DealName" class="form-control" placeholder="Enter Deal Name">
+                            </div>
+                        </div>
+                        <!-- Account Name -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="AccountName" class="text-secondary font-w500">Account Name</label>
+                                <input type="text" name="AccountName" id="AccountName" class="form-control" placeholder="Enter Account Name">
+                            </div>
+                        </div>
+                        <!-- Type -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Type" class="text-secondary font-w500">Type</label>
+                                <input type="text" name="Type" id="Type" class="form-control" placeholder="Enter Type">
+                            </div>
+                        </div>
+                        <!-- Next Step -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="NextStep" class="text-secondary font-w500">Next Step</label>
+                                <input type="text" name="NextStep" id="NextStep" class="form-control" placeholder="Enter Next Step">
+                            </div>
+                        </div>
+                        <!-- Lead Source -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="LeadSource" class="text-secondary font-w500">Lead Source</label>
+                                <input type="text" name="LeadSource" id="LeadSource" class="form-control" placeholder="Enter Lead Source">
+                            </div>
+                        </div>
+                        <!-- Contact Name -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="ContactName" class="text-secondary font-w500">Contact Name</label>
+                                <input type="text" name="ContactName" id="ContactName" class="form-control" placeholder="Enter Contact Name">
+                            </div>
+                        </div>
+                        <!-- User ID -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="UserId" class="text-secondary font-w500">User ID</label>
+                                <input type="text" name="UserId" id="UserId" class="form-control" placeholder="Enter User ID">
+                            </div>
+                        </div>
+                        <!-- User Level -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="UserLevel" class="text-secondary font-w500">User Level</label>
+                                <input type="text" name="UserLevel" id="UserLevel" class="form-control" placeholder="Enter User Level">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Financial Details -->
+                    <h5 class="mb-3">Financial Details</h5>
+                    <div class="row">
+                        <!-- Amount -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Amount" class="text-secondary font-w500">Amount</label>
+                                <input type="number" name="Amount" id="Amount" class="form-control" placeholder="Enter Amount">
+                            </div>
+                        </div>
+                        <!-- Closing Date -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="ClosingDate" class="text-secondary font-w500">Closing Date</label>
+                                <input type="date" name="ClosingDate" id="ClosingDate" class="form-control" placeholder="Enter Closing Date">
+                            </div>
+                        </div>
+                        <!-- Expected Revenue -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="ExpectedRevenue" class="text-secondary font-w500">Expected Revenue</label>
+                                <input type="number" name="ExpectedRevenue" id="ExpectedRevenue" class="form-control" placeholder="Enter Expected Revenue">
+                            </div>
+                        </div>
+                        <!-- Probability -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Probability" class="text-secondary font-w500">Probability (%)</label>
+                                <input type="number" name="Probability" id="Probability" class="form-control" placeholder="Enter Probability">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sales Pipeline Details -->
+                    <h5 class="mb-3">Sales Pipeline Details</h5>
+                    <div class="row">
+                        <!-- Pipeline -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Pipeline" class="text-secondary font-w500">Pipeline</label>
+                                <input type="text" name="Pipeline" id="Pipeline" class="form-control" placeholder="Enter Pipeline">
+                            </div>
+                        </div>
+                        <!-- Stage -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Stage" class="text-secondary font-w500">Stage</label>
+                                <input type="text" name="Stage" id="Stage" class="form-control" placeholder="Enter Stage">
+                            </div>
+                        </div>
+                        <!-- Campaign Source -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="CampaignSource" class="text-secondary font-w500">Campaign Source</label>
+                                <input type="text" name="CampaignSource" id="CampaignSource" class="form-control" placeholder="Enter Campaign Source">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Details -->
+                    <h5 class="mb-3">Additional Details</h5>
+                    <div class="row">
+                        <!-- Description -->
+                        <div class="col-md-12">
+                            <div class="form-group mb-3">
+                                <label for="Description" class="text-secondary font-w500">Description</label>
+                                <textarea name="Description" id="Description" class="form-control" placeholder="Enter Description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Opportunity Enhancements -->
+                    <h5 class="mb-3">Opportunity Enhancements</h5>
+                    <div class="row">
+                        <!-- Actual Close Date -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="ActualCloseDate" class="text-secondary font-w500">Actual Close Date</label>
+                                <input type="date" name="ActualCloseDate" id="ActualCloseDate" class="form-control" placeholder="Enter Actual Close Date">
+                            </div>
+                        </div>
+                        <!-- Actual Revenue -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="ActualRevenue" class="text-secondary font-w500">Actual Revenue</label>
+                                <input type="number" name="ActualRevenue" id="ActualRevenue" class="form-control" placeholder="Enter Actual Revenue">
+                            </div>
+                        </div>
+                        <!-- Win/Loss Reason -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="WinLossReason" class="text-secondary font-w500">Win/Loss Reason</label>
+                                <input type="text" name="WinLossReason" id="WinLossReason" class="form-control" placeholder="Enter Win/Loss Reason">
+                            </div>
+                        </div>
+                        <!-- Competitor -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Competitor" class="text-secondary font-w500">Competitor</label>
+                                <input type="text" name="Competitor" id="Competitor" class="form-control" placeholder="Enter Competitor">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Associations -->
+                    <h5 class="mb-3">Associations</h5>
+                    <div class="row">
+                        <!-- Customer ID -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="CustomerId" class="text-secondary font-w500">Customer ID</label>
+                                <input type="number" name="CustomerId" id="CustomerId" class="form-control" placeholder="Enter Customer ID">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mt-3">Confirm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--**********************************
+    Content body end
+***********************************-->

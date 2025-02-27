@@ -1,0 +1,79 @@
+﻿@page
+@model HRMS.Pages.LeaveModel
+@{
+}
+
+<div class="content-body">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li><h5 class="bc-title">Leave Management</h5></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Leave</a></li>
+        </ol>
+        <a class="text-primary fs-13" data-bs-toggle="offcanvas" href="#offcanvasExample1" role="button">+ List Leaves</a>
+    </div>
+
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="heading mb-0">Add New Leave Request</h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <h5 class="mb-3">Leave Details</h5>
+                    <div class="row">
+                        <!-- Employee ID -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="EmployeeId" class="text-secondary font-w500">Employee ID</label>
+                                <input type="number" name="EmployeeId" id="EmployeeId" class="form-control" placeholder="Enter Employee ID">
+                            </div>
+                        </div>
+
+                        <!-- Start Date -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="StartDate" class="text-secondary font-w500">Start Date</label>
+                                <input type="date" name="StartDate" id="StartDate" class="form-control">
+                            </div>
+                        </div>
+
+                        <!-- End Date -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="EndDate" class="text-secondary font-w500">End Date</label>
+                                <input type="date" name="EndDate" id="EndDate" class="form-control">
+                            </div>
+                        </div>
+
+                        <!-- Leave Type -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="LeaveType" class="text-secondary font-w500">Leave Type</label>
+                                <input type="text" name="LeaveType" id="LeaveType" class="form-control" placeholder="Enter Leave Type (e.g., Sick, Vacation)">
+                            </div>
+                        </div>
+
+                        <!-- Reason -->
+                        <div class="col-12">
+                            <div class="form-group mb-3">
+                                <label for="Reason" class="text-secondary font-w500">Reason</label>
+                                <textarea name="Reason" id="Reason" class="form-control" rows="3" placeholder="Enter Reason for Leave"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Approval Status -->
+                        <div class="col-md-6">
+                            <div class="form-check mb-3">
+                                <input type="checkbox" name="Approved" id="Approved" class="form-check-input">
+                                <label for="Approved" class="form-check-label">Approved</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mt-3">Submit Leave Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

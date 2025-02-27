@@ -1,0 +1,66 @@
+﻿@page
+@model Finance.Pages.BillModel
+@{
+}
+
+<div class="content-body">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li><h5 class="bc-title">Bill Management</h5></li>
+        </ol>
+    </div>
+
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="heading mb-0">Add New Bill</h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <h5>Bill Information</h5>
+                    <div class="row">
+                        <!-- Company ID -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="CompanyMasterId" class="text-secondary font-w500">Company ID</label>
+                                <input type="number" name="CompanyMasterId" id="CompanyMasterId" class="form-control" placeholder="Enter Company ID">
+                            </div>
+                        </div>
+                        <!-- Vendor ID -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="VendorId" class="text-secondary font-w500">Vendor ID</label>
+                                <input type="number" name="VendorId" id="VendorId" class="form-control" placeholder="Enter Vendor ID">
+                            </div>
+                        </div>
+                        <!-- Due Date -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="DueDate" class="text-secondary font-w500">Due Date</label>
+                                <input type="date" name="DueDate" id="DueDate" class="form-control">
+                            </div>
+                        </div>
+                        <!-- Amount -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Amount" class="text-secondary font-w500">Amount</label>
+                                <input type="number" step="0.01" name="Amount" id="Amount" class="form-control" placeholder="Enter Amount">
+                            </div>
+                        </div>
+                        <!-- Is Paid -->
+                        <div class="col-md-12">
+                            <div class="form-group mb-3">
+                                <label for="IsPaid" class="text-secondary font-w500">Is Paid</label>
+                                <select name="IsPaid" id="IsPaid" class="form-control">
+                                    <option value="false">No</option>
+                                    <option value="true">Yes</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Bill</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

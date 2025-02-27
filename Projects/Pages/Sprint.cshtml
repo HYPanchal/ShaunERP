@@ -1,0 +1,53 @@
+﻿@page
+@model Projects.Pages.SprintModel
+@{
+}
+
+<div class="content-body">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li><h5 class="bc-title">Sprint Management</h5></li>
+        </ol>
+    </div>
+
+    <div class="container-fluid">
+        <!-- Sprint Form -->
+        <div class="card">
+            <div class="card-header">
+                <h4 class="heading mb-0">Add New Sprint</h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <h5>Sprint Details</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Name" class="text-secondary font-w500">Sprint Name</label>
+                                <input type="text" name="Name" id="Name" class="form-control" placeholder="Enter Sprint Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="StartDate" class="text-secondary font-w500">Start Date</label>
+                                <input type="date" name="StartDate" id="StartDate" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="EndDate" class="text-secondary font-w500">End Date</label>
+                                <input type="date" name="EndDate" id="EndDate" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="ProjectId" class="text-secondary font-w500">Project ID</label>
+                                <input type="number" name="ProjectId" id="ProjectId" class="form-control" placeholder="Enter Project ID">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Sprint</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

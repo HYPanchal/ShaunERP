@@ -1,0 +1,59 @@
+﻿@page
+@model Finance.Pages.TaxRateModel
+@{
+}
+<div class="content-body">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li><h5 class="bc-title">Tax Management</h5></li>
+            <li class="breadcrumb-item">
+                <a href="javascript:void(0)">Home</a>
+            </li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Add Tax Record</a></li>
+        </ol>
+    </div>
+
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="heading mb-0">Add New Tax Record</h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <h5>Tax Rate Information</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="TaxName" class="text-secondary font-w500">Tax Name</label>
+                                <input type="text" name="TaxName" id="TaxName" class="form-control" placeholder="Enter Tax Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Rate" class="text-secondary font-w500">Tax Rate (%)</label>
+                                <input type="number" step="0.01" name="Rate" id="Rate" class="form-control" placeholder="Enter Tax Rate">
+                            </div>
+                        </div>
+                    </div>
+                    <h5>Tax Transaction Details</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="InvoiceId" class="text-secondary font-w500">Invoice ID</label>
+                                <input type="text" name="InvoiceId" id="InvoiceId" class="form-control" placeholder="Enter Invoice ID">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="TaxAmount" class="text-secondary font-w500">Tax Amount</label>
+                                <input type="number" step="0.01" name="TaxAmount" id="TaxAmount" class="form-control" placeholder="Enter Tax Amount">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

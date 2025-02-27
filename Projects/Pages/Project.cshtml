@@ -1,0 +1,57 @@
+﻿@page
+@model Projects.Pages.ProjectModel
+@{
+}
+
+<div class="content-body">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li><h5 class="bc-title">Project Management</h5></li>
+        </ol>
+    </div>
+
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="heading mb-0">Add New Project</h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <h5>Project Information</h5>
+                    <div class="row">
+                        <!-- Project Name -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Name" class="text-secondary font-w500">Project Name</label>
+                                <input type="text" name="Name" id="Name" class="form-control" placeholder="Enter Project Name">
+                            </div>
+                        </div>
+                        <!-- Project Description -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Description" class="text-secondary font-w500">Project Description</label>
+                                <textarea name="Description" id="Description" class="form-control" placeholder="Enter Project Description"></textarea>
+                            </div>
+                        </div>
+                        <!-- Start Date -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="StartDate" class="text-secondary font-w500">Start Date</label>
+                                <input type="date" name="StartDate" id="StartDate" class="form-control">
+                            </div>
+                        </div>
+                        <!-- End Date -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="EndDate" class="text-secondary font-w500">End Date</label>
+                                <input type="date" name="EndDate" id="EndDate" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Create Project</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

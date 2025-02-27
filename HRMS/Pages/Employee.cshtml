@@ -1,0 +1,78 @@
+﻿@page
+@model HRMS.Pages.EmployeeModel
+@{
+}
+
+<div class="content-body">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li><h5 class="bc-title">Employee</h5></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Add Employee</a></li>
+        </ol>
+    </div>
+
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="heading mb-0">Add New Employee</h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <h5 class="mb-3">Employee Details</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="FirstName">First Name</label>
+                                <input type="text" name="FirstName" id="FirstName" class="form-control" placeholder="Enter First Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="LastName">Last Name</label>
+                                <input type="text" name="LastName" id="LastName" class="form-control" placeholder="Enter Last Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Email">Email</label>
+                                <input type="email" name="Email" id="Email" class="form-control" placeholder="Enter Email">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="PhoneNumber">Phone Number</label>
+                                <input type="text" name="PhoneNumber" id="PhoneNumber" class="form-control" placeholder="Enter Phone Number">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="HireDate">Hire Date</label>
+                                <input type="date" name="HireDate" id="HireDate" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="JobTitle">Job Title</label>
+                                <input type="text" name="JobTitle" id="JobTitle" class="form-control" placeholder="Enter Job Title">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="DepartmentId">Department</label>
+                                <select name="DepartmentId" id="DepartmentId" class="form-control">
+                                    <option value="">Select Department</option>
+                                    @* @foreach (var employee in Model.EmployeeModel) *@
+                                    @* { *@
+                                    @*     <option value="@employee.Id">@employee.Name</option> *@
+                                    @* } *@
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+﻿@page
+@model Finance.Pages.BankReconsiliationModel
+@{
+}
+
+<div class="content-body">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li><h5 class="bc-title">Bank Reconciliation</h5></li>
+        </ol>
+    </div>
+
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="heading mb-0">Add New Bank Reconciliation</h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <h5>Reconciliation Details</h5>
+                    <div class="row">
+                        <!-- Company ID -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="CompanyMasterId" class="text-secondary font-w500">Company ID</label>
+                                <input type="number" name="CompanyMasterId" id="CompanyMasterId" class="form-control" placeholder="Enter Company ID">
+                            </div>
+                        </div>
+                        <!-- Bank Account ID -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="BankAccountId" class="text-secondary font-w500">Bank Account ID</label>
+                                <input type="number" name="BankAccountId" id="BankAccountId" class="form-control" placeholder="Enter Bank Account ID">
+                            </div>
+                        </div>
+                        <!-- Bank Balance -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="BankBalance" class="text-secondary font-w500">Bank Balance</label>
+                                <input type="number" step="0.01" name="BankBalance" id="BankBalance" class="form-control" placeholder="Enter Bank Balance">
+                            </div>
+                        </div>
+                        <!-- System Balance -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="SystemBalance" class="text-secondary font-w500">System Balance</label>
+                                <input type="number" step="0.01" name="SystemBalance" id="SystemBalance" class="form-control" placeholder="Enter System Balance">
+                            </div>
+                        </div>
+                        <!-- Reconciliation Date -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="ReconciliationDate" class="text-secondary font-w500">Reconciliation Date</label>
+                                <input type="date" name="ReconciliationDate" id="ReconciliationDate" class="form-control">
+                            </div>
+                        </div>
+                        <!-- Notes -->
+                        <div class="col-md-12">
+                            <div class="form-group mb-3">
+                                <label for="Notes" class="text-secondary font-w500">Notes</label>
+                                <textarea name="Notes" id="Notes" class="form-control" placeholder="Enter any additional notes"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Submit Reconciliation</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+﻿@page
+@model HRMS.Pages.SalaryModel
+@{
+}
+
+<div class="content-body">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li><h5 class="bc-title">Salary</h5></li>
+            <li class="breadcrumb-item">
+                <a href="javascript:void(0)">Home</a>
+            </li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Salary</a></li>
+        </ol>
+        <a class="text-primary fs-13" data-bs-toggle="offcanvas" href="#offcanvasExample1" role="button" aria-controls="offcanvasExample1">+ List Salaries</a>
+    </div>
+
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="heading mb-0">Add New Salary</h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <h5 class="mb-3">Salary Details</h5>
+                    <div class="row">
+                        <!-- Employee ID -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="EmployeeId" class="text-secondary font-w500">Employee ID</label>
+                                <input type="number" name="EmployeeId" id="EmployeeId" class="form-control" placeholder="Enter Employee ID">
+                            </div>
+                        </div>
+                        <!-- Basic Salary -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="BasicSalary" class="text-secondary font-w500">Basic Salary</label>
+                                <input type="number" step="0.01" name="BasicSalary" id="BasicSalary" class="form-control" placeholder="Enter Basic Salary">
+                            </div>
+                        </div>
+                        <!-- Allowances -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Allowances" class="text-secondary font-w500">Allowances</label>
+                                <input type="number" step="0.01" name="Allowances" id="Allowances" class="form-control" placeholder="Enter Allowances">
+                            </div>
+                        </div>
+                        <!-- Deductions -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Deductions" class="text-secondary font-w500">Deductions</label>
+                                <input type="number" step="0.01" name="Deductions" id="Deductions" class="form-control" placeholder="Enter Deductions">
+                            </div>
+                        </div>
+                        <!-- Net Salary -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="NetSalary" class="text-secondary font-w500">Net Salary</label>
+                                <input type="number" step="0.01" name="NetSalary" id="NetSalary" class="form-control" placeholder="Enter Net Salary">
+                            </div>
+                        </div>
+                        <!-- Effective Date -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="EffectiveDate" class="text-secondary font-w500">Effective Date</label>
+                                <input type="date" name="EffectiveDate" id="EffectiveDate" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mt-3">Confirm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

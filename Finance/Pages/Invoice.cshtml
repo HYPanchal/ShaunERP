@@ -1,0 +1,71 @@
+﻿@page
+@model Finance.Pages.InvoiceModel
+@{
+}
+
+<div class="content-body">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li><h5 class="bc-title">Invoice Management</h5></li>
+        </ol>
+    </div>
+
+    <div class="container-fluid">
+        <!-- Invoice Form -->
+        <div class="card">
+            <div class="card-header">
+                <h4 class="heading mb-0">Create New Invoice</h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <h5>Invoice Information</h5>
+                    <div class="row">
+                        <!-- Company ID -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="CompanyMasterId" class="text-secondary font-w500">Company ID</label>
+                                <input type="number" name="CompanyMasterId" id="CompanyMasterId" class="form-control" placeholder="Enter Company ID">
+                            </div>
+                        </div>
+
+                        <!-- Customer ID -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="FinanceCustomerId" class="text-secondary font-w500">Customer ID</label>
+                                <input type="number" name="FinanceCustomerId" id="FinanceCustomerId" class="form-control" placeholder="Enter Customer ID">
+                            </div>
+                        </div>
+
+                        <!-- Invoice Date -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="InvoiceDate" class="text-secondary font-w500">Invoice Date</label>
+                                <input type="date" name="InvoiceDate" id="InvoiceDate" class="form-control">
+                            </div>
+                        </div>
+
+                        <!-- Amount -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Amount" class="text-secondary font-w500">Amount</label>
+                                <input type="number" step="0.01" name="Amount" id="Amount" class="form-control" placeholder="Enter Invoice Amount">
+                            </div>
+                        </div>
+
+                        <!-- Is Paid -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="IsPaid" class="text-secondary font-w500">Payment Status</label>
+                                <select name="IsPaid" id="IsPaid" class="form-control">
+                                    <option value="false">Unpaid</option>
+                                    <option value="true">Paid</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create Invoice</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

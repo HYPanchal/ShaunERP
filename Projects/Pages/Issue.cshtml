@@ -1,0 +1,93 @@
+﻿@page
+@model Projects.Pages.IssueModel
+@{
+}
+
+<div class="content-body">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li><h5 class="bc-title">Issue Management</h5></li>
+        </ol>
+    </div>
+
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="heading mb-0">Add New Issue</h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <h5>Issue Details</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Title" class="text-secondary font-w500">Title</label>
+                                <input type="text" name="Title" id="Title" class="form-control" placeholder="Enter Issue Title">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="ProjectId" class="text-secondary font-w500">Project ID</label>
+                                <input type="number" name="ProjectId" id="ProjectId" class="form-control" placeholder="Enter Project ID">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group mb-3">
+                                <label for="Description" class="text-secondary font-w500">Description</label>
+                                <textarea name="Description" id="Description" class="form-control" placeholder="Enter Issue Description" rows="4"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5>Issue Settings</h5>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group mb-3">
+                                <label for="Type" class="text-secondary font-w500">Issue Type</label>
+                                <select name="Type" id="Type" class="form-control">
+                                    <option value="Bug">Bug</option>
+                                    <option value="Feature">Feature</option>
+                                    <option value="Task">Task</option>
+                                    <option value="Improvement">Improvement</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group mb-3">
+                                <label for="Status" class="text-secondary font-w500">Status</label>
+                                <select name="Status" id="Status" class="form-control">
+                                    <option value="New">New</option>
+                                    <option value="Open">Open</option>
+                                    <option value="InProgress">In Progress</option>
+                                    <option value="Resolved">Resolved</option>
+                                    <option value="Closed">Closed</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group mb-3">
+                                <label for="Priority" class="text-secondary font-w500">Priority</label>
+                                <select name="Priority" id="Priority" class="form-control">
+                                    <option value="Low">Low</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="High">High</option>
+                                    <option value="Critical">Critical</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="DueDate" class="text-secondary font-w500">Due Date</label>
+                                <input type="date" name="DueDate" id="DueDate" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mt-3">Submit Issue</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Let me know if you’d like me to add handling for comments or work logs! -->

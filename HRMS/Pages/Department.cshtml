@@ -1,0 +1,88 @@
+﻿@page
+@model HRMS.Pages.DepartmentModel
+@{
+}
+
+<div class="content-body">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li><h5 class="bc-title">Department</h5></li>
+            <li class="breadcrumb-item">
+                <a href="javascript:void(0)">
+                    Home
+                </a>
+            </li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Add Department</a></li>
+        </ol>
+        <a class="text-primary fs-13" data-bs-toggle="offcanvas" href="#offcanvasExample1" role="button" aria-controls="offcanvasExample1">+ List Departments</a>
+    </div>
+
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="heading mb-0">Add New Department</h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <h5 class="mb-3">Department Details</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Name" class="text-secondary font-w500">Department Name</label>
+                                <input type="text" name="Name" id="Name" class="form-control" placeholder="Enter Department Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Description" class="text-secondary font-w500">Description</label>
+                                <input type="text" name="Description" id="Description" class="form-control" placeholder="Enter Description">
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="mb-3">Employees</h5>
+                    <div id="employees-section">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="EmployeeName" class="text-secondary font-w500">Employee Name</label>
+                                    <input type="text" name="Employees[0].Name" class="form-control" placeholder="Enter Employee Name">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="EmployeeRole" class="text-secondary font-w500">Role</label>
+                                    <input type="text" name="Employees[0].Role" class="form-control" placeholder="Enter Employee Role">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-secondary" onclick="addEmployee()">Add Employee</button>
+                    <button type="submit" class="btn btn-primary mt-3">Confirm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let employeeCount = 1;
+    function addEmployee() {
+        const section = document.getElementById('employees-section');
+        section.innerHTML += `
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <input type="text" name="Employees[${employeeCount}].Name" class="form-control" placeholder="Enter Employee Name">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <input type="text" name="Employees[${employeeCount}].Role" class="form-control" placeholder="Enter Employee Role">
+                    </div>
+                </div>
+            </div>`;
+        employeeCount++;
+    }
+</script>

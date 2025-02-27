@@ -1,0 +1,72 @@
+﻿@page
+@model Finance.Pages.BankAccountModel
+@{
+}
+<div class="content-body">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li><h5 class="bc-title">Bank Management</h5></li>
+            <li class="breadcrumb-item">
+                <a href="javascript:void(0)">Home</a>
+            </li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Add Bank Details</a></li>
+        </ol>
+    </div>
+
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="heading mb-0">Add Bank Account</h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <h5>Bank Account Details</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="BankName" class="text-secondary font-w500">Bank Name</label>
+                                <input type="text" name="BankName" id="BankName" class="form-control" placeholder="Enter Bank Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="AccountNumber" class="text-secondary font-w500">Account Number</label>
+                                <input type="text" name="AccountNumber" id="AccountNumber" class="form-control" placeholder="Enter Account Number">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Balance" class="text-secondary font-w500">Balance</label>
+                                <input type="text" name="Balance" id="Balance" class="form-control" placeholder="Enter Balance">
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5>Bank Transaction</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="TransactionDate" class="text-secondary font-w500">Transaction Date</label>
+                                <input type="date" name="TransactionDate" id="TransactionDate" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Amount" class="text-secondary font-w500">Amount</label>
+                                <input type="text" name="Amount" id="Amount" class="form-control" placeholder="Enter Amount">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group mb-3">
+                                <label for="Description" class="text-secondary font-w500">Description</label>
+                                <textarea name="Description" id="Description" class="form-control" rows="3" placeholder="Transaction Description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

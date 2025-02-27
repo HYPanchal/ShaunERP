@@ -1,0 +1,139 @@
+﻿@page
+@model CRM.Pages.MeetingModel
+@{
+}
+<!--**********************************
+    Content body start
+***********************************-->
+<div class="content-body">
+
+    <!-- row -->
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li><h5 class="bc-title">Meeting</h5></li>
+            <li class="breadcrumb-item">
+                <a href="javascript:void(0)">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.125 6.375L8.5 1.41667L14.875 6.375V14.1667C14.875 14.5424 14.7257 14.9027 14.4601 15.1684C14.1944 15.4341 13.8341 15.5833 13.4583 15.5833H3.54167C3.16594 15.5833 2.80561 15.4341 2.53993 15.1684C2.27426 14.9027 2.125 14.5424 2.125 14.1667V6.375Z" stroke="#2C2C2C" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M6.375 15.5833V8.5H10.625V15.5833" stroke="#2C2C2C" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Home
+                </a>
+            </li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Meeting</a></li>
+        </ol>
+        <a class="text-primary fs-13" data-bs-toggle="offcanvas" href="#offcanvasExample1" role="button" aria-controls="offcanvasExample1">+ List Meetings</a>
+    </div>
+    <!-- row -->
+
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="heading mb-0">Add New Meeting</h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <div class="row">
+                        <!-- Title -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Title" class="text-secondary font-w500">Title</label>
+                                <input type="text" name="Title" id="Title" class="form-control" placeholder="Enter Title">
+                            </div>
+                        </div>
+                        <!-- Location -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Location" class="text-secondary font-w500">Location</label>
+                                <input type="text" name="Location" id="Location" class="form-control" placeholder="Enter Location">
+                            </div>
+                        </div>
+                        <!-- All Day -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <div class="form-check">
+                                    <input type="checkbox" name="AllDay" id="AllDay" class="form-check-input">
+                                    <label for="AllDay" class="form-check-label">All Day</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- From -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="From" class="text-secondary font-w500">From</label>
+                                <input type="datetime-local" name="From" id="From" class="form-control" placeholder="Select Start Date & Time">
+                            </div>
+                        </div>
+                        <!-- To -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="To" class="text-secondary font-w500">To</label>
+                                <input type="datetime-local" name="To" id="To" class="form-control" placeholder="Select End Date & Time">
+                            </div>
+                        </div>
+                        <!-- Host -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Host" class="text-secondary font-w500">Host</label>
+                                <input type="text" name="Host" id="Host" class="form-control" placeholder="Enter Host">
+                            </div>
+                        </div>
+                        <!-- Participants -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Participants" class="text-secondary font-w500">Participants</label>
+                                <input type="text" name="Participants" id="Participants" class="form-control" placeholder="Enter Participants (comma separated)">
+                            </div>
+                        </div>
+                        <!-- Related To -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="RelatedTo" class="text-secondary font-w500">Related To</label>
+                                <input type="text" name="RelatedTo" id="RelatedTo" class="form-control" placeholder="Enter Related Entity (e.g., Lead, Contact, Deal)">
+                            </div>
+                        </div>
+                        <!-- Repeat -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Repeat" class="text-secondary font-w500">Repeat</label>
+                                <input type="text" name="Repeat" id="Repeat" class="form-control" placeholder="Enter Repeat Pattern">
+                            </div>
+                        </div>
+                        <!-- Participants Reminder -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="ParticipantsReminder" class="text-secondary font-w500">Participants Reminder</label>
+                                <input type="datetime-local" name="ParticipantsReminder" id="ParticipantsReminder" class="form-control" placeholder="Select Participants Reminder Date & Time">
+                            </div>
+                        </div>
+                        <!-- Reminder -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Reminder" class="text-secondary font-w500">Reminder</label>
+                                <input type="datetime-local" name="Reminder" id="Reminder" class="form-control" placeholder="Select Reminder Date & Time">
+                            </div>
+                        </div>
+                        <!-- Agenda -->
+                        <div class="col-md-12">
+                            <div class="form-group mb-3">
+                                <label for="Agenda" class="text-secondary font-w500">Agenda</label>
+                                <textarea name="Agenda" id="Agenda" class="form-control" placeholder="Enter Agenda"></textarea>
+                            </div>
+                        </div>
+                        <!-- Meeting Type -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="MeetingType" class="text-secondary font-w500">Meeting Type</label>
+                                <input type="text" name="MeetingType" id="MeetingType" class="form-control" placeholder="Enter Meeting Type">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Confirm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--**********************************
+    Content body end
+***********************************-->

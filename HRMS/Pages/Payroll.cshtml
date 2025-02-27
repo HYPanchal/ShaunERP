@@ -1,0 +1,72 @@
+﻿@page
+@model HRMS.Pages.PayrollModel
+@{
+}
+
+<div class="content-body">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li><h5 class="bc-title">Payroll</h5></li>
+            <li class="breadcrumb-item">
+                <a href="javascript:void(0)">Home</a>
+            </li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Payroll</a></li>
+        </ol>
+        <a class="text-primary fs-13" data-bs-toggle="offcanvas" href="#offcanvasExample1" role="button" aria-controls="offcanvasExample1">+ List Payrolls</a>
+    </div>
+
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="heading mb-0">Add Payroll</h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <h5 class="mb-3">Payroll Details</h5>
+                    <div class="row">
+                        <!-- Employee ID -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="EmployeeId" class="text-secondary font-w500">Employee ID</label>
+                                <input type="number" name="EmployeeId" id="EmployeeId" class="form-control" placeholder="Enter Employee ID">
+                            </div>
+                        </div>
+
+                        <!-- Payroll Date -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="PayrollDate" class="text-secondary font-w500">Payroll Date</label>
+                                <input type="date" name="PayrollDate" id="PayrollDate" class="form-control">
+                            </div>
+                        </div>
+
+                        <!-- Gross Pay -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="GrossPay" class="text-secondary font-w500">Gross Pay</label>
+                                <input type="number" step="0.01" name="GrossPay" id="GrossPay" class="form-control" placeholder="Enter Gross Pay">
+                            </div>
+                        </div>
+
+                        <!-- Net Pay -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="NetPay" class="text-secondary font-w500">Net Pay</label>
+                                <input type="number" step="0.01" name="NetPay" id="NetPay" class="form-control" placeholder="Enter Net Pay">
+                            </div>
+                        </div>
+
+                        <!-- Remarks -->
+                        <div class="col-12">
+                            <div class="form-group mb-3">
+                                <label for="Remarks" class="text-secondary font-w500">Remarks</label>
+                                <textarea name="Remarks" id="Remarks" class="form-control" rows="3" placeholder="Enter any remarks"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Confirm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

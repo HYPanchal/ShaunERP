@@ -1,0 +1,91 @@
+﻿@page
+@model Users.Pages.UserModel
+@{
+}
+<!--**********************************
+    Content body start
+***********************************-->
+<div class="content-body">
+
+    <!-- row -->
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li><h5 class="bc-title">User</h5></li>
+            <li class="breadcrumb-item">
+                <a href="javascript:void(0)">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.125 6.375L8.5 1.41667L14.875 6.375V14.1667C14.875 14.5424 14.7257 14.9027 14.4601 15.1684C14.1944 15.4341 13.8341 15.5833 13.4583 15.5833H3.54167C3.16594 15.5833 2.80561 15.4341 2.53993 15.1684C2.27426 14.9027 2.125 14.5424 2.125 14.1667V6.375Z" stroke="#2C2C2C" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M6.375 15.5833V8.5H10.625V15.5833" stroke="#2C2C2C" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Home
+                </a>
+            </li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">User</a></li>
+        </ol>
+        <a class="text-primary fs-13" data-bs-toggle="offcanvas" href="#offcanvasExample1" role="button" aria-controls="offcanvasExample1">+ List Users</a>
+    </div>
+    <!-- row -->
+
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="heading mb-0">Add New User</h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <!-- User Information -->
+                    <h5 class="mb-3">User Information</h5>
+                    <div class="row">
+                        <!-- First Name -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="FirstName" class="text-secondary font-w500">First Name</label>
+                                <input type="text" name="FirstName" id="FirstName" class="form-control" placeholder="Enter First Name">
+                            </div>
+                        </div>
+                        <!-- Last Name -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="LastName" class="text-secondary font-w500">Last Name</label>
+                                <input type="text" name="LastName" id="LastName" class="form-control" placeholder="Enter Last Name">
+                            </div>
+                        </div>
+                        <!-- Email -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Email" class="text-secondary font-w500">Email</label>
+                                <input type="email" name="Email" id="Email" class="form-control" placeholder="Enter Email">
+                            </div>
+                        </div>
+                        <!-- Phone Number -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="PhoneNumber" class="text-secondary font-w500">Phone Number</label>
+                                <input type="text" name="PhoneNumber" id="PhoneNumber" class="form-control" placeholder="Enter Phone Number">
+                            </div>
+                        </div>
+                        <!-- Username -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Username" class="text-secondary font-w500">Username</label>
+                                <input type="text" name="Username" id="Username" class="form-control" placeholder="Enter Username">
+                            </div>
+                        </div>
+                        <!-- Password -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Password" class="text-secondary font-w500">Password</label>
+                                <input type="password" name="Password" id="Password" class="form-control" placeholder="Enter Password">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mt-3">Confirm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--**********************************
+    Content body end
+***********************************-->

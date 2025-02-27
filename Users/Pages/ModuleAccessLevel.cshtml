@@ -1,0 +1,41 @@
+﻿@page
+@model Users.Pages.ModuleAccessLevelModel
+@{
+}
+!-- User Module Access Form -->
+<div class="card mt-5">
+    <div class="card-header">
+        <h4 class="heading mb-0">Add User Module Access</h4>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <h5>Access Details</h5>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label for="CompanyUserId" class="text-secondary font-w500">Company User ID</label>
+                        <input type="number" name="CompanyUserId" id="CompanyUserId" class="form-control" placeholder="Enter Company User ID">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label for="CompanyModuleId" class="text-secondary font-w500">Company Module ID</label>
+                        <input type="number" name="CompanyModuleId" id="CompanyModuleId" class="form-control" placeholder="Enter Company Module ID">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label for="AccessLevel" class="text-secondary font-w500">Access Level</label>
+                        <select name="AccessLevel" id="AccessLevel" class="form-control">
+                            <option value="None">None</option>
+                            <option value="ReadOnly">Read Only</option>
+                            <option value="ReadWrite">Read & Write</option>
+                            <option value="Admin">Admin</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Access</button>
+        </form>
+    </div>
+</div>

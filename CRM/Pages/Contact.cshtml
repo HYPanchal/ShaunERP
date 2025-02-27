@@ -1,0 +1,364 @@
+﻿@page
+@model CRM.Pages.ContactModel
+@{
+}
+<!--**********************************
+    Content body start
+***********************************-->
+<div class="content-body">
+
+    <!-- row -->
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li><h5 class="bc-title">Contact</h5></li>
+            <li class="breadcrumb-item">
+                <a href="javascript:void(0)">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.125 6.375L8.5 1.41667L14.875 6.375V14.1667C14.875 14.5424 14.7257 14.9027 14.4601 15.1684C14.1944 15.4341 13.8341 15.5833 13.4583 15.5833H3.54167C3.16594 15.5833 2.80561 15.4341 2.53993 15.1684C2.27426 14.9027 2.125 14.5424 2.125 14.1667V6.375Z" stroke="#2C2C2C" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M6.375 15.5833V8.5H10.625V15.5833" stroke="#2C2C2C" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Home
+                </a>
+            </li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Contact</a></li>
+        </ol>
+        <a class="text-primary fs-13" data-bs-toggle="offcanvas" href="#offcanvasExample1" role="button" aria-controls="offcanvasExample1">+ List Contacts</a>
+    </div>
+    <!-- row -->
+
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="heading mb-0">Add New Contact</h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <!-- Basic Information -->
+                    <h5>Basic Information</h5>
+                    <div class="row">
+                        <!-- Contact Owner -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="ContactOwner" class="text-secondary font-w500">Contact Owner</label>
+                                <input type="text" name="ContactOwner" id="ContactOwner" class="form-control" placeholder="Enter Contact Owner">
+                            </div>
+                        </div>
+                        <!-- First Name -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="FirstName" class="text-secondary font-w500">First Name</label>
+                                <input type="text" name="FirstName" id="FirstName" class="form-control" placeholder="Enter First Name">
+                            </div>
+                        </div>
+                        <!-- Last Name -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="LastName" class="text-secondary font-w500">Last Name</label>
+                                <input type="text" name="LastName" id="LastName" class="form-control" placeholder="Enter Last Name">
+                            </div>
+                        </div>
+                        <!-- Title -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Title" class="text-secondary font-w500">Title</label>
+                                <input type="text" name="Title" id="Title" class="form-control" placeholder="Enter Title">
+                            </div>
+                        </div>
+                        <!-- Department -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Department" class="text-secondary font-w500">Department</label>
+                                <input type="text" name="Department" id="Department" class="form-control" placeholder="Enter Department">
+                            </div>
+                        </div>
+                        <!-- Date of Birth -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="DateOfBirth" class="text-secondary font-w500">Date of Birth</label>
+                                <input type="date" name="DateOfBirth" id="DateOfBirth" class="form-control" placeholder="Enter Date of Birth">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Account & Reporting Information -->
+                    <h5>Account &amp; Reporting Information</h5>
+                    <div class="row">
+                        <!-- Account Name -->
+                        <div class="col-md-4">
+                            <div class="form-group mb-3">
+                                <label for="AccountName" class="text-secondary font-w500">Account Name</label>
+                                <input type="text" name="AccountName" id="AccountName" class="form-control" placeholder="Enter Account Name">
+                            </div>
+                        </div>
+                        <!-- Vendor Name -->
+                        <div class="col-md-4">
+                            <div class="form-group mb-3">
+                                <label for="VendorName" class="text-secondary font-w500">Vendor Name</label>
+                                <input type="text" name="VendorName" id="VendorName" class="form-control" placeholder="Enter Vendor Name">
+                            </div>
+                        </div>
+                        <!-- Reporting To -->
+                        <div class="col-md-4">
+                            <div class="form-group mb-3">
+                                <label for="ReportingTo" class="text-secondary font-w500">Reporting To</label>
+                                <input type="text" name="ReportingTo" id="ReportingTo" class="form-control" placeholder="Enter Reporting To">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Details -->
+                    <h5>Contact Details</h5>
+                    <div class="row">
+                        <!-- Email -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Email" class="text-secondary font-w500">Email</label>
+                                <input type="email" name="Email" id="Email" class="form-control" placeholder="Enter Email">
+                            </div>
+                        </div>
+                        <!-- Secondary Email -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="SecondaryEmail" class="text-secondary font-w500">Secondary Email</label>
+                                <input type="email" name="SecondaryEmail" id="SecondaryEmail" class="form-control" placeholder="Enter Secondary Email">
+                            </div>
+                        </div>
+                        <!-- Phone -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Phone" class="text-secondary font-w500">Phone</label>
+                                <input type="text" name="Phone" id="Phone" class="form-control" placeholder="Enter Phone">
+                            </div>
+                        </div>
+                        <!-- Mobile -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Mobile" class="text-secondary font-w500">Mobile</label>
+                                <input type="text" name="Mobile" id="Mobile" class="form-control" placeholder="Enter Mobile">
+                            </div>
+                        </div>
+                        <!-- Home Phone -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="HomePhone" class="text-secondary font-w500">Home Phone</label>
+                                <input type="text" name="HomePhone" id="HomePhone" class="form-control" placeholder="Enter Home Phone">
+                            </div>
+                        </div>
+                        <!-- Fax -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Fax" class="text-secondary font-w500">Fax</label>
+                                <input type="text" name="Fax" id="Fax" class="form-control" placeholder="Enter Fax">
+                            </div>
+                        </div>
+                        <!-- Assistant -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Assistant" class="text-secondary font-w500">Assistant</label>
+                                <input type="text" name="Assistant" id="Assistant" class="form-control" placeholder="Enter Assistant">
+                            </div>
+                        </div>
+                        <!-- Assistant Phone -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="AsstPhone" class="text-secondary font-w500">Assistant Phone</label>
+                                <input type="text" name="AsstPhone" id="AsstPhone" class="form-control" placeholder="Enter Assistant Phone">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Source and Ownership -->
+                    <h5>Source and Ownership</h5>
+                    <div class="row">
+                        <!-- Lead Source -->
+                        <div class="col-md-4">
+                            <div class="form-group mb-3">
+                                <label for="LeadSource" class="text-secondary font-w500">Lead Source</label>
+                                <input type="text" name="LeadSource" id="LeadSource" class="form-control" placeholder="Enter Lead Source">
+                            </div>
+                        </div>
+                        <!-- User ID -->
+                        <div class="col-md-4">
+                            <div class="form-group mb-3">
+                                <label for="UserId" class="text-secondary font-w500">User ID</label>
+                                <input type="text" name="UserId" id="UserId" class="form-control" placeholder="Enter User ID">
+                            </div>
+                        </div>
+                        <!-- User Level -->
+                        <div class="col-md-4">
+                            <div class="form-group mb-3">
+                                <label for="UserLevel" class="text-secondary font-w500">User Level</label>
+                                <input type="text" name="UserLevel" id="UserLevel" class="form-control" placeholder="Enter User Level">
+                            </div>
+                        </div>
+                        <!-- Skype ID -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="SkypeId" class="text-secondary font-w500">Skype ID</label>
+                                <input type="text" name="SkypeId" id="SkypeId" class="form-control" placeholder="Enter Skype ID">
+                            </div>
+                        </div>
+                        <!-- Twitter -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="Twitter" class="text-secondary font-w500">Twitter</label>
+                                <input type="text" name="Twitter" id="Twitter" class="form-control" placeholder="Enter Twitter">
+                            </div>
+                        </div>
+                        <!-- Email Opt Out -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <div class="form-check">
+                                    <input type="checkbox" name="EmailOptOut" id="EmailOptOut" class="form-check-input">
+                                    <label for="EmailOptOut" class="form-check-label">Email Opt Out</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mailing Address -->
+                    <h5>Mailing Address</h5>
+                    <div class="row">
+                        <!-- Mailing Street -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="MailingStreet" class="text-secondary font-w500">Mailing Street</label>
+                                <input type="text" name="MailingStreet" id="MailingStreet" class="form-control" placeholder="Enter Mailing Street">
+                            </div>
+                        </div>
+                        <!-- Mailing City -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="MailingCity" class="text-secondary font-w500">Mailing City</label>
+                                <input type="text" name="MailingCity" id="MailingCity" class="form-control" placeholder="Enter Mailing City">
+                            </div>
+                        </div>
+                        <!-- Mailing State -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="MailingState" class="text-secondary font-w500">Mailing State</label>
+                                <input type="text" name="MailingState" id="MailingState" class="form-control" placeholder="Enter Mailing State">
+                            </div>
+                        </div>
+                        <!-- Mailing Zip -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="MailingZip" class="text-secondary font-w500">Mailing Zip</label>
+                                <input type="text" name="MailingZip" id="MailingZip" class="form-control" placeholder="Enter Mailing Zip">
+                            </div>
+                        </div>
+                        <!-- Mailing Country -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="MailingCountry" class="text-secondary font-w500">Mailing Country</label>
+                                <input type="text" name="MailingCountry" id="MailingCountry" class="form-control" placeholder="Enter Mailing Country">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Address -->
+                    <h5>Other Address</h5>
+                    <div class="row">
+                        <!-- Other Street -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="OtherStreet" class="text-secondary font-w500">Other Street</label>
+                                <input type="text" name="OtherStreet" id="OtherStreet" class="form-control" placeholder="Enter Other Street">
+                            </div>
+                        </div>
+                        <!-- Other City -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="OtherCity" class="text-secondary font-w500">Other City</label>
+                                <input type="text" name="OtherCity" id="OtherCity" class="form-control" placeholder="Enter Other City">
+                            </div>
+                        </div>
+                        <!-- Other State -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="OtherState" class="text-secondary font-w500">Other State</label>
+                                <input type="text" name="OtherState" id="OtherState" class="form-control" placeholder="Enter Other State">
+                            </div>
+                        </div>
+                        <!-- Other Zip -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="OtherZip" class="text-secondary font-w500">Other Zip</label>
+                                <input type="text" name="OtherZip" id="OtherZip" class="form-control" placeholder="Enter Other Zip">
+                            </div>
+                        </div>
+                        <!-- Other Country -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="OtherCountry" class="text-secondary font-w500">Other Country</label>
+                                <input type="text" name="OtherCountry" id="OtherCountry" class="form-control" placeholder="Enter Other Country">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Details -->
+                    <h5>Additional Details</h5>
+                    <div class="row">
+                        <!-- Description -->
+                        <div class="col-md-12">
+                            <div class="form-group mb-3">
+                                <label for="Description" class="text-secondary font-w500">Description</label>
+                                <textarea name="Description" id="Description" class="form-control" placeholder="Enter Description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Associations -->
+                    <h5>Associations</h5>
+                    <div class="row">
+                        <!-- Prospect ID -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="ProspectId" class="text-secondary font-w500">Prospect ID</label>
+                                <input type="number" name="ProspectId" id="ProspectId" class="form-control" placeholder="Enter Prospect ID">
+                            </div>
+                        </div>
+                        <!-- Customer ID -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="CustomerId" class="text-secondary font-w500">Customer ID</label>
+                                <input type="number" name="CustomerId" id="CustomerId" class="form-control" placeholder="Enter Customer ID">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Demographic & Preference Details -->
+                    <h5>Demographic &amp; Preference Details</h5>
+                    <div class="row">
+                        <!-- Preferred Contact Method -->
+                        <div class="col-md-4">
+                            <div class="form-group mb-3">
+                                <label for="PreferredContactMethod" class="text-secondary font-w500">Preferred Contact Method</label>
+                                <input type="text" name="PreferredContactMethod" id="PreferredContactMethod" class="form-control" placeholder="Enter Preferred Contact Method">
+                            </div>
+                        </div>
+                        <!-- Gender -->
+                        <div class="col-md-4">
+                            <div class="form-group mb-3">
+                                <label for="Gender" class="text-secondary font-w500">Gender</label>
+                                <input type="text" name="Gender" id="Gender" class="form-control" placeholder="Enter Gender">
+                            </div>
+                        </div>
+                        <!-- Language -->
+                        <div class="col-md-4">
+                            <div class="form-group mb-3">
+                                <label for="Language" class="text-secondary font-w500">Language</label>
+                                <input type="text" name="Language" id="Language" class="form-control" placeholder="Enter Language">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mt-3">Confirm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--**********************************
+    Content body end
+***********************************-->
