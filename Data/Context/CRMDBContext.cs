@@ -13,5 +13,7 @@ namespace Data.Context
         public CRMDBContext(DbContextOptions<CRMDBContext> options) : base(options) { }
 
         public DbSet<Lead> Leads { get; set; }
+
+        public DbSet<Core.Task> Tasks { get; set; }
     }
 }
