@@ -15,5 +15,8 @@ namespace Data.Context
         public DbSet<Lead> Leads { get; set; }
 
         public DbSet<Core.Task> Tasks { get; set; }
+
+        //public DbSet<Core.User> users { get; set; }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using Services.UtilitySerivices;
 
@@ -15,12 +16,14 @@ namespace API.Controllers.GenericController
             this.crud = crud;
         }
 
+        [Authorize]
         [HttpGet("all")]
         public async Task<ActionResult<IEnumerable<T>>> getAllEntity()
         {
             return Ok(await crud.GetAllEntityes());
         }
 
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult<T>> getEntityById(int id)
         {
@@ -35,12 +38,14 @@ namespace API.Controllers.GenericController
             return Ok(await crud.AddEntity(entity));
         }
 
+        [Authorize]
         [HttpPut("update")]
         public async Task<ActionResult<T>> updateEntity([FromBody] T entity)
         {
             return Ok(await crud.UpdateEntity(entity));
         }
 
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<ActionResult<T>> deleteEmtity(int id)
         {
